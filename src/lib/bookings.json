@@ -1,0 +1,19 @@
+[
+  {
+    "id": "1763749389896",
+    "trek": "everest-base-camp",
+    "trekName": "Everest Base Camp",
+    "agencyId": "agency-1",
+    "customerName": "Bunny",
+    "customerEmail": "bunny@gmail.com",
+    "customerPhone": "12345679",
+    "dates": {
+      "start": "2025-11-22",
+      "end": "2025-11-28"
+    },
+    "groupSize": 5,
+    "specialRequests": "Need to know more about treks.",
+    "status": "cancelled",
+    "createdAt": "2025-11-21T18:23:09.896Z"
+  }
+]

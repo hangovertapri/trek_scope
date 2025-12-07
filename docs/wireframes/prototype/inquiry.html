@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wireframe — Inquiry</title>
+  <style>
+    body{font-family: Arial,Helvetica,sans-serif;margin:24px;color:#111}
+    .card{border:1px solid #ddd;padding:12px;border-radius:6px;max-width:640px}
+    input,select,textarea{width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;margin-top:6px}
+    .actions{display:flex;justify-content:flex-end;gap:8px;margin-top:8px}
+  </style>
+</head>
+<body>
+  <h1>Inquiry Form</h1>
+  <div class="card">
+    <form onsubmit="alert('This is a prototype — client validation would run here');return false;">
+      <label>Trek</label>
+      <select><option>Everest Base Camp</option><option>Annapurna Circuit</option></select>
+      <label>Preferred dates</label>
+      <input placeholder="Start date - End date" />
+      <label>Group size</label>
+      <input type="number" placeholder="Number of people" />
+      <label>Experience level</label>
+      <select><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select>
+      <label>Email</label>
+      <input type="email" placeholder="you@example.com" />
+      <div class="actions">
+        <a href="detail.html">Cancel</a>
+        <button type="submit" style="padding:8px 12px;background:#111;color:#fff;border:none;border-radius:6px">Send</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

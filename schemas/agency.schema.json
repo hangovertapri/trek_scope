@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agency Schema",
+  "description": "Schema for trekking agency profiles",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique agency identifier"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Agency name"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly slug"
+    },
+    "location": {
+      "type": "string",
+      "description": "City/region in Nepal"
+    },
+    "website": {
+      "type": "string",
+      "format": "uri",
+      "description": "Website URL"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "description": {
+      "type": "string",
+      "description": "Agency description"
+    },
+    "yearEstablished": {
+      "type": "integer",
+      "minimum": 1970,
+      "description": "Year agency was established"
+    },
+    "licenses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Government licenses & certifications (TIMS, RAP approved, etc.)"
+    },
+    "specialties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Specialty trekking regions"
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Languages spoken by staff (English, Nepali, etc.)"
+    },
+    "averageRating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Average review rating (1–5 stars)"
+    },
+    "reviewCount": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of reviews"
+    },
+    "verified": {
+      "type": "boolean",
+      "description": "Whether agency is verified by TrekMapper"
+    },
+    "logo": {
+      "type": "string",
+      "description": "Logo image URL"
+    },
+    "treks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of trek IDs managed by this agency"
+    },
+    "groupSizeMin": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Minimum group size"
+    },
+    "groupSizeMax": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Maximum group size"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Registration date"
+    }
+  },
+  "required": ["name", "slug", "location", "email", "description"],
+  "additionalProperties": false
+}

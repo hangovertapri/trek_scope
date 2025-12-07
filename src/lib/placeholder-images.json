@@ -1,0 +1,82 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-home",
+      "description": "Himalayan mountains at sunset with a trail in the foreground",
+      "imageUrl": "https://images.unsplash.com/photo-1746280484973-b5359505f5d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxIaW1hbGF5YW4lMjBtb3VudGFpbnMlMjBzdW5zZXR8ZW58MHx8fHwxNzYzMzgxMjQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Himalayan mountains sunset"
+    },
+    {
+      "id": "everest-base-camp-1",
+      "description": "View of Mount Everest from a trail",
+      "imageUrl": "https://images.unsplash.com/photo-1557988377-2fc190fd7cf1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxNb3VudCUyMEV2ZXJlc3QlMjB0cmFpbHxlbnwwfHx8fDE3NjMzODEyNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Mount Everest trail"
+    },
+    {
+      "id": "everest-base-camp-2",
+      "description": "Prayer flags with snowy peaks in the background",
+      "imageUrl": "https://images.unsplash.com/photo-1561048267-d97f34bcb24a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcmF5ZXIlMjBmbGFncyUyMEhpbWFsYXlhc3xlbnwwfHx8fDE3NjMzODEyNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "prayer flags Himalayas"
+    },
+    {
+      "id": "everest-base-camp-3",
+      "description": "A small village in the Himalayas",
+      "imageUrl": "https://images.unsplash.com/photo-1718894294953-92e3f9a17559?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxIaW1hbGF5YW4lMjB2aWxsYWdlfGVufDB8fHx8MTc2MzM4MTI0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Himalayan village"
+    },
+    {
+      "id": "annapurna-circuit-1",
+      "description": "Annapurna massif with a blue sky",
+      "imageUrl": "https://images.unsplash.com/photo-1671047928516-40537cf7f592?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8QW5uYXB1cm5hJTIwbW91bnRhaW5zfGVufDB8fHx8MTc2MzM4MTI0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Annapurna mountains"
+    },
+    {
+      "id": "annapurna-circuit-2",
+      "description": "Suspension bridge on the Annapurna circuit",
+      "imageUrl": "https://images.unsplash.com/photo-1691517098837-445e752173f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdXNwZW5zaW9uJTIwYnJpZGdlJTIwTmVwYWx8ZW58MHx8fHwxNzYzMzgxMjQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "suspension bridge Nepal"
+    },
+    {
+      "id": "annapurna-circuit-3",
+      "description": "Thorong La Pass on the Annapurna circuit",
+      "imageUrl": "https://images.unsplash.com/photo-1612911912054-59796b9548f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb3VudGFpbiUyMHBhc3MlMjBzbm93fGVufDB8fHx8MTc2MzM4MTI0OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain pass snow"
+    },
+    {
+      "id": "manaslu-circuit-1",
+      "description": "View of Mount Manaslu",
+      "imageUrl": "https://images.unsplash.com/photo-1751566609738-e1ed580bcb33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxNb3VudCUyME1hbmFzbHV8ZW58MHx8fHwxNzYzMzgxMjQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Mount Manaslu"
+    },
+    {
+      "id": "langtang-valley-1",
+      "description": "Lush green valley in the Langtang region",
+      "imageUrl": "https://images.unsplash.com/photo-1734454736533-8aac0f287cf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z3JlZW4lMjB2YWxsZXklMjBtb3VudGFpbnN8ZW58MHx8fHwxNzYzMzgxMjQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "green valley mountains"
+    },
+    {
+      "id": "tour-du-mont-blanc-1",
+      "description": "View of Mont Blanc from the trail",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1579168169191-efd70a2cd05d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxNb250JTIwQmxhbmN8ZW58MHx8fHwxNzYzMzAyNDcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Mont Blanc"
+    },
+    {
+      "id": "inca-trail-1",
+      "description": "View of Machu Picchu from the Sun Gate",
+      "imageUrl": "https://images.unsplash.com/photo-1590835192370-3941b97e93fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8TWFjaHUlMjBQaWNjaHV8ZW58MHx8fHwxNzYzMjc4NTkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Machu Picchu"
+    },
+    {
+      "id": "patagonia-w-trek-1",
+      "description": "The towers of Torres del Paine",
+      "imageUrl": "https://images.unsplash.com/photo-1637580981046-6e14709be202?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8VG9ycmVzJTIwZGVsJTIwUGFpbmV8ZW58MHx8fHwxNzYzMzgxMjQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Torres del Paine"
+    },
+    {
+      "id": "default-trek",
+      "description": "A scenic mountain trail",
+      "imageUrl": "https://images.unsplash.com/photo-1584907600887-9732fa3647ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb3VudGFpbiUyMHRyYWlsfGVufDB8fHx8MTc2MzM2ODE2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain trail"
+    }
+  ]
+}

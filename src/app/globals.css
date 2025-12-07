@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 220 15% 15%; /* Dark Slate */
+    --foreground: 210 40% 98%;
+    --card: 220 15% 20%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 15% 18%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 45 100% 51%; /* Golden Yellow */
+    --primary-foreground: 220 15% 10%;
+    --secondary: 220 10% 30%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 10% 25%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 45 100% 51%; /* Golden Yellow */
+    --accent-foreground: 220 15% 10%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 10% 30%;
+    --input: 220 10% 30%;
+    --ring: 45 100% 51%;
+    --chart-1: 45 100% 51%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Keeping a dark theme variant, but making it same as light for now */
+    --background: 220 15% 15%; /* Dark Slate */
+    --foreground: 210 40% 98%;
+    --card: 220 15% 20%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 15% 18%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 45 100% 51%; /* Golden Yellow */
+    --primary-foreground: 220 15% 10%;
+    --secondary: 220 10% 30%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 10% 25%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 45 100% 51%;
+    --accent-foreground: 220 15% 10%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 10% 30%;
+    --input: 220 10% 30%;
+    --ring: 45 100% 51%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+@layer components {
+  .parallax-container {
+    @apply relative h-[60vh] md:h-[80vh] w-full overflow-hidden;
+    perspective: 1px;
+    transform-style: preserve-3d;
+  }
+
+  .parallax-content {
+    @apply relative z-10 p-4 flex flex-col items-center justify-center text-center text-white h-full;
+  }
+
+  .parallax-image {
+    @apply absolute top-0 left-0 w-full h-full object-cover -z-10;
+    transform: translateZ(-1px) scale(2);
+  }
+
+  .parallax-overlay {
+    @apply absolute inset-0 bg-black/60 z-0;
+  }
+}
