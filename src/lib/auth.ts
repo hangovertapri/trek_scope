@@ -51,6 +51,8 @@ const credentialsSchema = z.object({
 
 const config = {
   secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || 'dev-secret-key-change-in-production',
+  trustHost: true,
+  basePath: '/api/auth',
   pages: {
     signIn: '/admin/login',
     error: '/admin/login',

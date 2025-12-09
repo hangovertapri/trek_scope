@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { getTrekBySlug, getAllTreks } from '@/lib/data';
 import type { Trek } from '@/lib/types';
+import CompareBar from '@/components/trek/compare-bar';
 import {
   Table,
   TableBody,
@@ -109,9 +110,12 @@ function ComparePageContent() {
 
 export default function ComparePage() {
   return (
-    <Suspense fallback={<div className="container mx-auto px-4 py-16 text-center">Loading comparison...</div>}>
-      <ComparePageContent />
-    </Suspense>
+    <>
+      <Suspense fallback={<div className="container mx-auto px-4 py-16 text-center">Loading comparison...</div>}>
+        <ComparePageContent />
+      </Suspense>
+      <CompareBar />
+    </>
   );
 }
 

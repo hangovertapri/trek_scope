@@ -1,12 +1,10 @@
 import type { Metadata } from 'next';
 import { Toaster } from '@/components/ui/toaster';
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
 import { cn } from '@/lib/utils';
 import './globals.css';
 import { CompareProvider } from '@/context/compare-context';
-import CompareBar from '@/components/trek/compare-bar';
 import { AuthProvider } from '@/components/auth-provider';
+import Header from '@/components/layout/header';
 
 export const metadata: Metadata = {
   title: 'TrekMapper - Compare Your Next Adventure',
@@ -59,8 +57,6 @@ export default function RootLayout({
             <main id="main-content" className="flex-grow" role="main">
               {children}
             </main>
-            <CompareBar />
-            <Footer />
             <Toaster />
           </CompareProvider>
         </AuthProvider>

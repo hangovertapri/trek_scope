@@ -1,0 +1,22 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/bookings/route": "/api/bookings",
+  "/api/inquiries/route": "/api/inquiries",
+  "/api/messages/route": "/api/messages",
+  "/api/treks/route": "/api/treks",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/favicon.ico/route": "/favicon.ico",
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/admin/agencies/page": "/admin/agencies",
+  "/admin/login/page": "/admin/login",
+  "/agency/login/page": "/agency/login",
+  "/admin/dashboard/page": "/admin/dashboard",
+  "/agency/dashboard/page": "/agency/dashboard",
+  "/compare/page": "/compare",
+  "/page": "/",
+  "/my-bookings/page": "/my-bookings",
+  "/treks/page": "/treks",
+  "/recommend/page": "/recommend",
+  "/inquiry/page": "/inquiry",
+  "/treks/[slug]/page": "/treks/[slug]"
+}

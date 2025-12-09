@@ -3,6 +3,7 @@
 import { Suspense } from 'react';
 import Meta from '@/components/meta';
 import TreksContent from '@/components/trek/treks-content';
+import CompareBar from '@/components/trek/compare-bar';
 import { Skeleton } from '@/components/ui/skeleton';
 
 function TreksLoadingSkeleton() {
@@ -37,6 +38,7 @@ export default function TreksPage() {
           <TreksContent />
         </Suspense>
       </div>
+      <CompareBar />
     </>
   );
 }

@@ -6,7 +6,7 @@ export default function Logo() {
     <Link href="/" className="flex items-center space-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md px-2 py-1">
       <Mountain className="h-6 w-6 text-primary" />
       <span className="font-bold text-lg font-headline text-primary">
-        TrekMapper
+        TrekScope
       </span>
     </Link>
   );
