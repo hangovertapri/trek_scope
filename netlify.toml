@@ -15,6 +15,7 @@
 
 [context.production.environment]
   NODE_ENV = "production"
+  NPM_CONFIG_PRODUCTION = "false"
 
 [functions]
   node_bundler = "esbuild"
