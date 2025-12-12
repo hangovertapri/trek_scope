@@ -2,8 +2,8 @@
 
 A modern, interactive trekking comparison website for discovering, comparing, and booking treks in Nepal and around the globe. Built with Next.js, TypeScript, and Tailwind CSS.
 
-**Status:** MVP (v0.1.0)  
-**Last Updated:** November 2025
+**Status:** MVP (v0.2.0) - 7 Priority Features Implemented
+**Last Updated:** December 12, 2025
 
 ## ⭐ Features (MVP)
 
@@ -18,6 +18,15 @@ A modern, interactive trekking comparison website for discovering, comparing, an
 - ✅ **Inquiry Form:** Pre-filled with trek info; capture contact details and preferences
 - ✅ **Sticky Compare Bar:** Fixed bottom UI showing selected treks with "Compare" CTA
 - ✅ **Responsive Design:** Mobile-optimized; works on 375px+ screens
+
+### Priority Features (Dec 2025)
+- ✅ **Animated Altitude Charts:** Real-time elevation visualization with difficulty curves
+- ✅ **Weather Integration:** Live weather data with Open-Meteo API for each trek location
+- ✅ **Trek Difficulty Quiz:** 4-question assessment with personalized trek recommendations
+- ✅ **Review System:** Full CRUD reviews with 5-star ratings, sorting, and filtering
+- ✅ **Cost Calculator:** Interactive budget planner with 5 expense categories
+- ✅ **Advanced Filters:** 6-category filtering (difficulty, duration, altitude, season, permit, price)
+- ✅ **Testimonials Carousel:** Social proof section with 6+ verified trekker testimonials
 
 ### Admin & Agency (Dev Mode)
 - ✅ **Admin Dashboard:** Add, edit, delete treks with form validation
