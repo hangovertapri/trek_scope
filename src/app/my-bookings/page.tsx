@@ -148,8 +148,8 @@ export default function MyBookingsPage() {
                     <h3 className="font-semibold mb-2">Status</h3>
                     <div className="mb-4">
                       <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                        booking.status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
-                        booking.status === 'approved' ? 'bg-green-100 text-green-800' :
+                        booking.status === 'pending' ? 'bg-accent/20 text-accent' :
+                        booking.status === 'approved' ? 'bg-amber-100 text-amber-800' :
                         booking.status === 'rejected' ? 'bg-red-100 text-red-800' :
                         booking.status === 'completed' ? 'bg-blue-100 text-blue-800' :
                         'bg-gray-100 text-gray-800'

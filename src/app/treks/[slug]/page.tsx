@@ -36,7 +36,12 @@ import { formatCurrency } from '@/lib/utils';
 import { Separator } from '@/components/ui/separator';
 import AnimateOnScroll from '@/components/shared/animate-on-scroll';
 import AltitudeChart from '@/components/trek/altitude-chart';
+import AltitudeChartAnimated from '@/components/trek/altitude-chart-animated';
+import WeatherWidget from '@/components/trek/weather-widget';
 import TrekMap from '@/components/trek/map';
+import ReviewsList from '@/components/trek/reviews-list';
+import ReviewForm from '@/components/trek/review-form';
+import CostCalculator from '@/components/trek/cost-calculator';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -195,10 +200,22 @@ export default async function TrekDetailPage({ params }: Props) {
                <h2 className="text-3xl font-bold font-headline text-primary mb-4">
                 Altitude Profile
               </h2>
-              <AltitudeChart itinerary={trek.itinerary} />
+              <AltitudeChartAnimated itinerary={trek.itinerary} difficulty={trek.difficulty} />
             </AnimateOnScroll>
 
             <Separator className="my-12" />
+
+            {trek.coordinates && (
+              <>
+                <AnimateOnScroll as="section" id="weather" className="scroll-mt-20">
+                  <h2 className="text-3xl font-bold font-headline text-primary mb-4">
+                    Current Weather Conditions
+                  </h2>
+                  <WeatherWidget coordinates={trek.coordinates} trekName={trek.name} />
+                </AnimateOnScroll>
+                <Separator className="my-12" />
+              </>
+            )}
 
             {trek.coordinates && (
               <>
@@ -299,6 +316,37 @@ export default async function TrekDetailPage({ params }: Props) {
             </div>
           </aside>
         </div>
+
+        {/* Reviews Section - Full Width */}
+        <Separator className="my-12" />
+
+        <AnimateOnScroll as="section" id="cost-calculator" className="scroll-mt-20">
+          <h2 className="text-3xl font-bold font-headline text-primary mb-8">
+            Budget Planner
+          </h2>
+          <CostCalculator trekPrice={trek.price_range} trekName={trek.name} />
+        </AnimateOnScroll>
+
+        <Separator className="my-12" />
+
+        <AnimateOnScroll as="section" id="reviews" className="scroll-mt-20">
+          <h2 className="text-3xl font-bold font-headline text-primary mb-8">
+            Trekker Reviews
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Reviews List */}
+            <div className="lg:col-span-2">
+              <ReviewsList trekId={trek.id} trekName={trek.name} />
+            </div>
+
+            {/* Review Form - Sticky Sidebar */}
+            <div className="lg:col-span-1">
+              <div id={`write-review-${trek.id}`} className="lg:sticky lg:top-32">
+                <ReviewForm trekId={trek.id} trekName={trek.name} />
+              </div>
+            </div>
+          </div>
+        </AnimateOnScroll>
       </div>
     </article>
   );

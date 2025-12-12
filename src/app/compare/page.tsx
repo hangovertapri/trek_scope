@@ -87,7 +87,7 @@ function ComparePageContent() {
                       }
                       if (feature.key === 'permit_required') {
                         return value ? (
-                          <Check className="h-5 w-5 text-green-600" />
+                          <Check className="h-5 w-5 text-amber-400" />
                         ) : (
                           <X className="h-5 w-5 text-red-600" />
                         );

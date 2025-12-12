@@ -3,20 +3,9 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Meta from '@/components/meta';
-import dynamic from 'next/dynamic';
+import TestimonialsSection from '@/components/testimonials/testimonials-section';
 import type { Trek } from '@/lib/types';
 import { useEffect, useState, useRef } from 'react';
-
-// Dynamic imports for Three.js components (client-side only)
-const AnimatedMountains = dynamic(() => import('@/components/three/animated-mountains').then(mod => ({ default: mod.AnimatedMountains })), {
-  ssr: false,
-  loading: () => <div className="w-full h-96 bg-slate-900 rounded-lg animate-pulse" />,
-});
-
-const Terrain3D = dynamic(() => import('@/components/three/terrain-3d').then(mod => ({ default: mod.Terrain3D })), {
-  ssr: false,
-  loading: () => <div className="w-full h-80 bg-slate-900 rounded-lg animate-pulse" />,
-});
 
 async function getFeaturedTreks(): Promise<Trek[]> {
   try {
@@ -225,50 +214,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 3D Mountains Section */}
-        <section className="py-24 px-4 bg-gradient-to-b from-slate-950 to-white">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <p className="text-sm tracking-widest text-gray-500 uppercase mb-4">Interactive Experience</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Explore Mountain Majesty</h2>
-              <p className="text-xl text-gray-700 max-w-2xl mx-auto">Immerse yourself in the 3D beauty of the Himalayas. Interact with the mountains and discover what awaits.</p>
-            </div>
-            <AnimatedMountains />
-          </div>
-        </section>
-
-        {/* 3D Terrain Section */}
-        <section className="py-24 px-4 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-              <div className="space-y-6">
-                <p className="text-sm tracking-widest text-gray-500 uppercase">Terrain Visualization</p>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Visualize Every Trail</h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Our advanced 3D terrain visualization helps you understand the landscape and elevation changes before you trek. See every ridge, valley, and peak in stunning 3D detail.
-                </p>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-4">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span className="text-gray-700">Real-time 3D terrain mapping</span>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span className="text-gray-700">Elevation profile visualization</span>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span className="text-gray-700">Interactive route planning</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <Terrain3D />
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Portfolio Grid - Parallax Scroll Effect */}
         <section ref={containerRef} className="relative bg-white overflow-hidden">
           {portfolios.map((portfolio, index) => (
@@ -472,18 +417,30 @@ export default function Home() {
                   Explore All Treks
                 </Button>
               </Link>
+              <Link href="/assess">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-6 text-lg font-semibold"
+                >
+                  Take Trek Quiz
+                </Button>
+              </Link>
               <Link href="/recommend">
                 <Button 
                   size="lg" 
                   variant="outline" 
                   className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-6 text-lg font-semibold"
                 >
-                  Find Your Trek
+                  Get AI Recommendations
                 </Button>
               </Link>
             </div>
           </div>
         </section>
+
+        {/* Testimonials Section */}
+        <TestimonialsSection />
 
         {/* Footer */}
         <footer className="bg-white border-t border-gray-200 py-12 px-4">

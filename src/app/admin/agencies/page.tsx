@@ -207,7 +207,7 @@ export default function AdminAgenciesPage() {
                   <p className="text-sm text-muted-foreground">Total Revenue</p>
                   <p className="text-3xl font-bold mt-2">${totalRevenue.toLocaleString()}</p>
                 </div>
-                <DollarSign className="h-8 w-8 text-green-500 opacity-20" />
+                <DollarSign className="h-8 w-8 text-amber-500 opacity-20" />
               </div>
             </Card>
 
@@ -305,10 +305,10 @@ export default function AdminAgenciesPage() {
                       <td className="py-2 px-4 font-medium">{agency.agencyName}</td>
                       <td className="text-right py-2 px-4">{agency.totalBookings}</td>
                       <td className="text-right py-2 px-4">
-                        <span className="text-green-600 font-semibold">{agency.completedBookings}</span>
+                        <span className="text-amber-600 font-semibold">{agency.completedBookings}</span>
                       </td>
                       <td className="text-right py-2 px-4">
-                        <span className="text-yellow-600 font-semibold">{agency.pendingBookings}</span>
+                        <span className="text-accent font-semibold">{agency.pendingBookings}</span>
                       </td>
                       <td className="text-right py-2 px-4 font-semibold">${agency.totalRevenue.toLocaleString()}</td>
                       <td className="text-right py-2 px-4">${agency.averageBookingValue}</td>
@@ -355,7 +355,7 @@ export default function AdminAgenciesPage() {
                   </Card>
                   <Card className="p-4">
                     <p className="text-sm text-muted-foreground">Completed</p>
-                    <p className="text-2xl font-bold text-green-600">{selectedAgencyData.completedBookings}</p>
+                    <p className="text-2xl font-bold text-amber-600">{selectedAgencyData.completedBookings}</p>
                   </Card>
                   <Card className="p-4">
                     <p className="text-sm text-muted-foreground">Total Revenue</p>
@@ -406,8 +406,8 @@ export default function AdminAgenciesPage() {
                                 </td>
                                 <td className="text-center py-2 px-4">
                                   <span className={`px-2 py-1 rounded text-xs font-semibold ${
-                                    booking.status === 'completed' ? 'bg-green-100 text-green-800' :
-                                    booking.status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
+                                    booking.status === 'completed' ? 'bg-amber-100 text-amber-800' :
+                                    booking.status === 'pending' ? 'bg-accent/20 text-accent' :
                                     booking.status === 'approved' ? 'bg-blue-100 text-blue-800' :
                                     booking.status === 'cancelled' ? 'bg-gray-100 text-gray-800' :
                                     'bg-red-100 text-red-800'
@@ -435,11 +435,11 @@ export default function AdminAgenciesPage() {
                         <div className="space-y-3">
                           <div className="flex justify-between items-center">
                             <span>Completed</span>
-                            <span className="font-semibold text-green-600">{selectedAgencyData.completedBookings}</span>
+                            <span className="font-semibold text-amber-600">{selectedAgencyData.completedBookings}</span>
                           </div>
                           <div className="flex justify-between items-center">
                             <span>Pending</span>
-                            <span className="font-semibold text-yellow-600">{selectedAgencyData.pendingBookings}</span>
+                            <span className="font-semibold text-accent">{selectedAgencyData.pendingBookings}</span>
                           </div>
                           <div className="flex justify-between items-center">
                             <span>Approved</span>

@@ -429,7 +429,7 @@ export default function AdminDashboard() {
                         
                         <div className="flex gap-2 justify-end">
                           <button type="button" onClick={cancelEdit} className="px-2 py-1 bg-gray-200 rounded">Cancel</button>
-                          <button type="submit" className="px-2 py-1 bg-green-600 text-white rounded">Save</button>
+                          <button type="submit" className="px-2 py-1 bg-accent text-white rounded">Save</button>
                         </div>
                       </form>
                     ) : (

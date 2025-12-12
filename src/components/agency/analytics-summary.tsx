@@ -31,7 +31,7 @@ export function AnalyticsSummaryCard({ label, value, trend, icon: Icon }:
           <p className="text-sm text-muted-foreground">{label}</p>
           <p className="text-3xl font-bold mt-2">{value}</p>
           {trend !== undefined && (
-            <div className={`flex items-center gap-1 mt-2 text-sm ${isPositive ? 'text-green-600' : 'text-red-600'}`}>
+            <div className={`flex items-center gap-1 mt-2 text-sm ${isPositive ? 'text-amber-600' : 'text-red-600'}`}>
               {isPositive ? <TrendingUp className="h-4 w-4" /> : <TrendingDown className="h-4 w-4" />}
               <span>{Math.abs(trend)}% vs last period</span>
             </div>

@@ -106,7 +106,7 @@ export default function MessageForm({ defaultTrek, trekName }: Props) {
             className={cn(
               "text-sm p-3 rounded-md",
               status === "success"
-                ? "bg-green-50 text-green-800 border border-green-200"
+                ? "bg-amber-50 text-amber-800 border border-amber-200"
                 : "bg-red-50 text-red-800 border border-red-200"
             )}
           >

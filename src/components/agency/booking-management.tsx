@@ -22,8 +22,8 @@ interface BookingManagementProps {
 }
 
 const statusConfig = {
-  pending: { bg: 'bg-yellow-100', text: 'text-yellow-800', label: 'Pending' },
-  approved: { bg: 'bg-green-100', text: 'text-green-800', label: 'Approved' },
+  pending: { bg: 'bg-accent/20', text: 'text-accent', label: 'Pending' },
+  approved: { bg: 'bg-amber-100', text: 'text-amber-800', label: 'Approved' },
   rejected: { bg: 'bg-red-100', text: 'text-red-800', label: 'Rejected' },
   completed: { bg: 'bg-blue-100', text: 'text-blue-800', label: 'Completed' },
 };
@@ -70,7 +70,7 @@ export function BookingManagement({ bookings, onApprove, onReject, onContact }: 
                   <div className="flex flex-col gap-2">
                     <Button 
                       size="sm" 
-                      className="bg-green-600 hover:bg-green-700 w-full"
+                      className="bg-accent hover:bg-accent/90 w-full"
                       onClick={() => onApprove?.(booking.id)}
                     >
                       Approve Booking

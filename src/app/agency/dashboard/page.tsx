@@ -232,7 +232,7 @@ function AgencyDashboardContent() {
                 <p className="text-sm text-muted-foreground">Total Revenue</p>
                 <p className="text-3xl font-bold mt-2">${analytics.totalRevenue.toLocaleString()}</p>
               </div>
-              <DollarSign className="h-8 w-8 text-green-500 opacity-20" />
+              <DollarSign className="h-8 w-8 text-amber-500 opacity-20" />
             </div>
           </Card>
 
@@ -352,7 +352,7 @@ function AgencyDashboardContent() {
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                         inquiry.status === 'new' ? 'bg-blue-100 text-blue-800' :
                         inquiry.status === 'read' ? 'bg-gray-100 text-gray-800' :
-                        'bg-green-100 text-green-800'
+                        'bg-amber-100 text-amber-800'
                       }`}>
                         {inquiry.status}
                       </span>
@@ -408,8 +408,8 @@ function AgencyDashboardContent() {
                       <div className="mb-4">
                         <div className="text-xs font-semibold text-muted-foreground uppercase mb-2">Status</div>
                         <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                          booking.status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
-                          booking.status === 'approved' ? 'bg-green-100 text-green-800' :
+                          booking.status === 'pending' ? 'bg-accent/20 text-accent' :
+                          booking.status === 'approved' ? 'bg-amber-100 text-amber-800' :
                           booking.status === 'rejected' ? 'bg-red-100 text-red-800' :
                           booking.status === 'completed' ? 'bg-blue-100 text-blue-800' :
                           booking.status === 'cancelled' ? 'bg-gray-100 text-gray-800' :
@@ -421,7 +421,7 @@ function AgencyDashboardContent() {
 
                       <div className="mb-4">
                         <div className="text-xs font-semibold text-muted-foreground uppercase mb-2">Revenue</div>
-                        <div className="text-lg font-bold text-green-600">${getBookingRevenue(booking).toLocaleString()}</div>
+                        <div className="text-lg font-bold text-amber-600">${getBookingRevenue(booking).toLocaleString()}</div>
                       </div>
 
                       <div className="flex gap-2 flex-wrap">
@@ -429,7 +429,7 @@ function AgencyDashboardContent() {
                           <>
                             <Button 
                               size="sm" 
-                              className="bg-green-600 hover:bg-green-700"
+                              className="bg-accent hover:bg-accent/90"
                               onClick={() => updateBookingStatus(booking.id, 'approved')}
                             >
                               Approve
@@ -480,7 +480,7 @@ function AgencyDashboardContent() {
                         <p className="text-sm text-muted-foreground">from {msg.name}</p>
                       </div>
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        !msg.read ? 'bg-yellow-100 text-yellow-800' : 'bg-gray-100 text-gray-800'
+                        !msg.read ? 'bg-accent/20 text-accent' : 'bg-gray-100 text-gray-800'
                       }`}>
                         {msg.read ? 'Read' : 'New'}
                       </span>

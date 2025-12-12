@@ -31,7 +31,7 @@ interface TrekCardProps {
 }
 
 const difficultyColors = {
-  Easy: 'bg-green-800/20 text-green-300 border-green-500/30',
+  Easy: 'bg-amber-800/20 text-amber-300 border-amber-500/30',
   Moderate: 'bg-yellow-800/20 text-yellow-300 border-yellow-500/30',
   Challenging: 'bg-orange-800/20 text-orange-300 border-orange-500/30',
   Expert: 'bg-red-800/20 text-red-300 border-red-500/30',

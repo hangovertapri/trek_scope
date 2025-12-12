@@ -148,7 +148,7 @@ export default function RecommendationForm() {
                   <p className="text-sm text-foreground/80 line-clamp-3">{trek.description}</p>
 
                   {trek.matchReason && (
-                    <p className="text-xs text-green-600 dark:text-green-400 italic">
+                    <p className="text-xs text-amber-600 dark:text-amber-400 italic">
                       ✓ {trek.matchReason}
                     </p>
                   )}

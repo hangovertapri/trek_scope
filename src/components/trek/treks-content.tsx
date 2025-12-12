@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { Trek } from '@/lib/types';
 import TrekCard from '@/components/trek/trek-card';
+import AdvancedFilters from '@/components/trek/advanced-filters';
 import {
   Select,
   SelectContent,
@@ -68,8 +69,20 @@ export default function TreksContent() {
     }
   }, [searchParams]);
 
-  const filteredTreks = useMemo(() => {
-    return allTreks.filter((trek: Trek) => {
+  const toggleSeason = (season: string) => {
+    setSelectedSeasons((prev) =>
+      prev.includes(season)
+        ? prev.filter((s) => s !== season)
+        : [...prev, season]
+    );
+  };
+
+  // Track filtered results
+  const [filteredTreks, setFilteredTreks] = useState<Trek[]>([]);
+
+  // Apply basic filters
+  useEffect(() => {
+    const basicFiltered = allTreks.filter((trek: Trek) => {
       const searchMatch =
         searchTerm === '' ||
         trek.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -86,15 +99,8 @@ export default function TreksContent() {
         );
       return searchMatch && difficultyMatch && regionMatch && durationMatch && seasonMatch;
     });
+    setFilteredTreks(basicFiltered);
   }, [allTreks, searchTerm, difficulty, region, durationRange, selectedSeasons]);
-
-  const toggleSeason = (season: string) => {
-    setSelectedSeasons((prev) =>
-      prev.includes(season)
-        ? prev.filter((s) => s !== season)
-        : [...prev, season]
-    );
-  };
 
   const resetFilters = () => {
     setSearchTerm('');
@@ -112,9 +118,35 @@ export default function TreksContent() {
     durationRange[1] !== 30 || 
     selectedSeasons.length > 0;
 
+  // Handle advanced filter changes - memoized to prevent infinite loops
+  const handleAdvancedFilterChange = useCallback((advanced: Trek[]) => {
+    // Apply basic filters on top of advanced filters
+    const basicFiltered = advanced.filter((trek: Trek) => {
+      const searchMatch =
+        searchTerm === '' ||
+        trek.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        trek.region.toLowerCase().includes(searchTerm.toLowerCase());
+      const difficultyMatch =
+        difficulty === 'all' || trek.difficulty === difficulty;
+      const regionMatch = region === 'all' || trek.region === region;
+      const durationMatch =
+        trek.duration >= durationRange[0] && trek.duration <= durationRange[1];
+      const seasonMatch =
+        selectedSeasons.length === 0 ||
+        trek.best_season.some((season: string) =>
+          selectedSeasons.includes(season)
+        );
+      return searchMatch && difficultyMatch && regionMatch && durationMatch && seasonMatch;
+    });
+    setFilteredTreks(basicFiltered);
+  }, [searchTerm, difficulty, region, durationRange, selectedSeasons]);
+
   return (
     <div>
-      {/* Filters Section */}
+      {/* Advanced Filters */}
+      <AdvancedFilters treks={allTreks} onFilterChange={handleAdvancedFilterChange} />
+
+      {/* Basic Filters Section */}
       <div className="mb-8 bg-card rounded-lg p-6 border border-border">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
