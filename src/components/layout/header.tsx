@@ -13,6 +13,7 @@ import { LogOut, Bookmark } from 'lucide-react';
 const navLinksList = [
   { href: '/', label: 'Home' },
   { href: '/treks', label: 'Treks' },
+  { href: '/explore', label: 'Explore Map' },
   { href: '/compare', label: 'Compare' },
   { href: '/recommend', label: 'Recommend' },
 ];

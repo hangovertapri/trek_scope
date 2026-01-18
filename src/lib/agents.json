@@ -1,0 +1,53 @@
+[
+  {
+    "id": "agency-1",
+    "username": "himalayan_explorers",
+    "email": "info@himalayanexplorers.com",
+    "agency_name": "Himalayan Explorers",
+    "phone": "+977-1-4567890",
+    "address": "Thamel, Kathmandu, Nepal",
+    "description": "Leading trekking agency with 15+ years of experience in Nepal Himalayas.",
+    "website": "https://himalayanexplorers.com",
+    "license_number": "HE-2010-001",
+    "rating": 4.8,
+    "total_reviews": 342,
+    "total_bookings": 1250,
+    "verified": true,
+    "active": true,
+    "created_at": "2010-03-15T08:00:00Z"
+  },
+  {
+    "id": "agency-2",
+    "username": "nepal_trekking_co",
+    "email": "booking@nepaltrekking.com",
+    "agency_name": "Nepal Trekking Co",
+    "phone": "+977-1-4567891",
+    "address": "Jyatha, Thamel, Kathmandu",
+    "description": "Premium trekking services with expert guides and excellent safety records.",
+    "website": "https://nepaltrekking.com",
+    "license_number": "NTC-2008-045",
+    "rating": 4.9,
+    "total_reviews": 528,
+    "total_bookings": 2100,
+    "verified": true,
+    "active": true,
+    "created_at": "2008-06-20T09:00:00Z"
+  },
+  {
+    "id": "agency-3",
+    "username": "peak_adventures",
+    "email": "contact@peakadventures.np",
+    "agency_name": "Peak Adventures",
+    "phone": "+977-1-4567892",
+    "address": "Chhetrapati, Kathmandu",
+    "description": "Budget-friendly trekking with quality service and experienced team.",
+    "website": "https://peakadventures.np",
+    "license_number": "PA-2015-123",
+    "rating": 4.6,
+    "total_reviews": 156,
+    "total_bookings": 580,
+    "verified": true,
+    "active": true,
+    "created_at": "2015-04-10T10:00:00Z"
+  }
+]

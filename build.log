@@ -1,0 +1,57 @@
+
+> nextn@0.1.0 build
+> cross-env NODE_ENV=production next build
+
+   ▲ Next.js 15.5.7
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 5.2s
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/46) ...
+   Generating static pages (11/46) 
+   Generating static pages (22/46) 
+   Generating static pages (34/46) 
+ ✓ Generating static pages (46/46)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                    8.73 kB         121 kB
+├ ○ /_not-found                             1 kB         102 kB
+├ ○ /admin/agencies                      4.89 kB         230 kB
+├ ○ /admin/dashboard                     3.59 kB         112 kB
+├ ○ /admin/login                         2.65 kB         115 kB
+├ ○ /agency/dashboard                    9.45 kB         234 kB
+├ ○ /agency/login                        2.64 kB         115 kB
+├ ƒ /api/auth/[...nextauth]                138 B         102 kB
+├ ƒ /api/bookings                          138 B         102 kB
+├ ƒ /api/inquiries                         138 B         102 kB
+├ ƒ /api/messages                          138 B         102 kB
+├ ƒ /api/treks                             138 B         102 kB
+├ ○ /assess                              6.66 kB         115 kB
+├ ○ /compare                             11.1 kB         128 kB
+├ ○ /inquiry                              1.7 kB         110 kB
+├ ○ /my-bookings                         4.48 kB         116 kB
+├ ○ /recommend                           7.81 kB         144 kB
+├ ○ /sitemap.xml                           138 B         102 kB
+├ ○ /treks                               13.6 kB         158 kB
+└ ● /treks/[slug]                         279 kB         399 kB
+    ├ /treks/everest-base-camp
+    ├ /treks/gokyo-lakes
+    ├ /treks/three-passes-eco
+    └ [+22 more paths]
++ First Load JS shared by all             101 kB
+  ├ chunks/255-9073042991d015e4.js       45.1 kB
+  ├ chunks/4bd1b696-1c88c00269cf164c.js  54.2 kB
+  └ other shared chunks (total)          2.06 kB
+
+
+ƒ Middleware                             33.3 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

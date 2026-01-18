@@ -207,10 +207,15 @@ function AgencyDashboardContent() {
           <h1 className="text-4xl font-bold mb-2">Agency Dashboard</h1>
           <p className="text-muted-foreground">Welcome, {session.data.user.name}</p>
         </div>
-        <Button variant="outline" onClick={handleLogout} className="gap-2">
-          <LogOut className="h-4 w-4" />
-          Sign Out
-        </Button>
+        <div className="flex gap-2">
+          <Button variant="default" onClick={() => router.push('/agency/offers')}>
+            Manage Trek Offerings
+          </Button>
+          <Button variant="outline" onClick={handleLogout} className="gap-2">
+            <LogOut className="h-4 w-4" />
+            Sign Out
+          </Button>
+        </div>
       </div>
 
       {/* KPI Cards */}

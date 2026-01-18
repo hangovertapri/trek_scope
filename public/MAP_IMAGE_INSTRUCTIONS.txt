@@ -1,0 +1,27 @@
+NEPAL MAP IMAGE SETUP INSTRUCTIONS
+====================================
+
+To use your custom medieval/fantasy Nepal map image:
+
+1. Save your Nepal map image (the one from the reference) as: nepal-map.png
+2. Place it in this folder: public/nepal-map.png
+3. The image should show Nepal's geography with mountains, terrain, and borders
+
+Image Requirements:
+- Format: PNG (preferred) or JPG
+- Recommended size: 2000-4000px wide for good quality
+- The image will be stretched to fit Nepal's geographical bounds:
+  - West: 79.5° longitude
+  - East: 88.5° longitude  
+  - North: 30.5° latitude
+  - South: 26.0° latitude
+
+The flags/markers will be positioned on top of this image based on trek coordinates.
+
+Alternative: If you want to use a different filename, update this line in:
+src/components/trek/interactive-nepal-map.tsx (around line 95)
+
+Change:
+  url: '/nepal-map.png'
+To:
+  url: '/your-image-name.png'

@@ -1,10 +1,13 @@
 'use client';
 
 import { Suspense } from 'react';
+import Link from 'next/link';
 import Meta from '@/components/meta';
 import TreksContent from '@/components/trek/treks-content';
 import CompareBar from '@/components/trek/compare-bar';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Map } from 'lucide-react';
 
 function TreksLoadingSkeleton() {
   return (
@@ -32,6 +35,16 @@ export default function TreksPage() {
           <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
             Find your next adventure from our collection of world-class treks.
           </p>
+          
+          {/* Interactive Map CTA */}
+          <div className="mt-6">
+            <Button asChild size="lg" variant="outline" className="gap-2">
+              <Link href="/explore">
+                <Map className="h-5 w-5" />
+                View Interactive 3D Map
+              </Link>
+            </Button>
+          </div>
         </div>
 
         <Suspense fallback={<TreksLoadingSkeleton />}>

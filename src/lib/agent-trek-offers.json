@@ -1,0 +1,254 @@
+[
+  {
+    "id": "offer-1",
+    "agent_id": "agency-1",
+    "agent_name": "Himalayan Explorers",
+    "agent_rating": 4.8,
+    "trek_id": "1",
+    "trek_slug": "everest-base-camp",
+    "price_usd": 1200,
+    "group_size_min": 2,
+    "group_size_max": 10,
+    "availability_start": "2026-03-01",
+    "availability_end": "2026-05-31",
+    "includes": [
+      "Professional guide",
+      "All permits (TIMS, Sagarmatha NP)",
+      "3 meals per day",
+      "Teahouse accommodation",
+      "Airport transfers",
+      "First aid kit"
+    ],
+    "excludes": [
+      "International flights",
+      "Travel insurance",
+      "Personal expenses",
+      "Tips for guides"
+    ],
+    "custom_notes": "We provide experienced Sherpa guides with 10+ years experience.",
+    "booking_terms": "50% deposit required. Free cancellation up to 30 days before trek start.",
+    "active": true,
+    "created_at": "2026-01-05T10:00:00Z",
+    "updated_at": "2026-01-10T14:30:00Z"
+  },
+  {
+    "id": "offer-2",
+    "agent_id": "agency-2",
+    "agent_name": "Nepal Trekking Co",
+    "agent_rating": 4.9,
+    "trek_id": "1",
+    "trek_slug": "everest-base-camp",
+    "price_usd": 1450,
+    "group_size_min": 4,
+    "group_size_max": 12,
+    "availability_start": "2026-03-15",
+    "availability_end": "2026-11-30",
+    "includes": [
+      "Expert guide + assistant guide",
+      "All permits and fees",
+      "3 meals per day + snacks",
+      "Luxury teahouse accommodation",
+      "Airport transfers",
+      "Helicopter rescue insurance",
+      "Duffel bag"
+    ],
+    "excludes": [
+      "International flights",
+      "Visa fees",
+      "Travel insurance",
+      "Alcoholic beverages"
+    ],
+    "custom_notes": "Premium service with smaller group sizes and experienced guides.",
+    "booking_terms": "30% deposit. Full refund if cancelled 45 days prior.",
+    "active": true,
+    "created_at": "2026-01-03T09:00:00Z",
+    "updated_at": "2026-01-08T16:00:00Z"
+  },
+  {
+    "id": "offer-3",
+    "agent_id": "agency-3",
+    "agent_name": "Peak Adventures",
+    "agent_rating": 4.6,
+    "trek_id": "1",
+    "trek_slug": "everest-base-camp",
+    "price_usd": 1100,
+    "group_size_min": 1,
+    "group_size_max": 8,
+    "availability_start": "2026-02-20",
+    "availability_end": "2026-12-15",
+    "includes": [
+      "Licensed guide",
+      "TIMS and National Park permits",
+      "3 meals per day",
+      "Basic teahouse accommodation",
+      "Kathmandu airport pickup"
+    ],
+    "excludes": [
+      "International flights",
+      "Travel insurance",
+      "Extra meals in Kathmandu",
+      "Personal gear",
+      "Tips"
+    ],
+    "custom_notes": "Budget-friendly option with quality service.",
+    "booking_terms": "40% deposit required. Cancellation fee applies within 21 days.",
+    "active": true,
+    "created_at": "2026-01-07T11:30:00Z",
+    "updated_at": "2026-01-07T11:30:00Z"
+  },
+  {
+    "id": "offer-4",
+    "agent_id": "agency-1",
+    "agent_name": "Himalayan Explorers",
+    "agent_rating": 4.8,
+    "trek_id": "5",
+    "trek_slug": "annapurna-base-camp",
+    "price_usd": 850,
+    "group_size_min": 2,
+    "group_size_max": 10,
+    "availability_start": "2026-03-01",
+    "availability_end": "2026-11-30",
+    "includes": [
+      "Professional guide",
+      "All permits (TIMS, ACAP)",
+      "3 meals per day",
+      "Teahouse accommodation",
+      "Pokhara-Kathmandu transfers"
+    ],
+    "excludes": [
+      "International flights",
+      "Travel insurance",
+      "Personal expenses"
+    ],
+    "custom_notes": "Beautiful trek with stunning mountain views.",
+    "booking_terms": "50% deposit required. Free cancellation up to 30 days before trek start.",
+    "active": true,
+    "created_at": "2026-01-05T10:30:00Z",
+    "updated_at": "2026-01-10T14:30:00Z"
+  },
+  {
+    "id": "offer-5",
+    "agent_id": "agency-2",
+    "agent_name": "Nepal Trekking Co",
+    "agent_rating": 4.9,
+    "trek_id": "5",
+    "trek_slug": "annapurna-base-camp",
+    "price_usd": 950,
+    "group_size_min": 4,
+    "group_size_max": 12,
+    "availability_start": "2026-03-15",
+    "availability_end": "2026-11-30",
+    "includes": [
+      "Expert guide + porter",
+      "All permits and entrance fees",
+      "3 meals per day + tea/coffee",
+      "Upgraded teahouse accommodation",
+      "Pokhara-Kathmandu bus tickets",
+      "Trekking map and guide book"
+    ],
+    "excludes": [
+      "International flights",
+      "Visa fees",
+      "Travel insurance",
+      "Extra snacks"
+    ],
+    "custom_notes": "Premium ABC trek with comfort and safety prioritized.",
+    "booking_terms": "30% deposit. Full refund if cancelled 45 days prior.",
+    "active": true,
+    "created_at": "2026-01-03T09:30:00Z",
+    "updated_at": "2026-01-08T16:00:00Z"
+  },
+  {
+    "id": "offer-6",
+    "agent_id": "agency-1",
+    "agent_name": "Himalayan Explorers",
+    "agent_rating": 4.8,
+    "trek_id": "8",
+    "trek_slug": "manaslu-circuit",
+    "price_usd": 1350,
+    "group_size_min": 2,
+    "group_size_max": 8,
+    "availability_start": "2026-03-10",
+    "availability_end": "2026-11-15",
+    "includes": [
+      "Professional guide",
+      "Restricted area permit + TIMS",
+      "3 meals per day",
+      "Teahouse/camping accommodation",
+      "Kathmandu-trek start transfers"
+    ],
+    "excludes": [
+      "International flights",
+      "Travel insurance",
+      "Personal gear",
+      "Tips"
+    ],
+    "custom_notes": "Remote trek through pristine mountain regions.",
+    "booking_terms": "50% deposit required. Cancellation policy applies.",
+    "active": true,
+    "created_at": "2026-01-05T11:00:00Z",
+    "updated_at": "2026-01-10T14:30:00Z"
+  },
+  {
+    "id": "offer-7",
+    "agent_id": "agency-3",
+    "agent_name": "Peak Adventures",
+    "agent_rating": 4.6,
+    "trek_id": "6",
+    "trek_slug": "poon-hill",
+    "price_usd": 350,
+    "group_size_min": 1,
+    "group_size_max": 15,
+    "availability_start": "2026-02-01",
+    "availability_end": "2026-12-20",
+    "includes": [
+      "Licensed guide",
+      "TIMS and ACAP permits",
+      "3 meals per day",
+      "Teahouse accommodation",
+      "Pokhara transfers"
+    ],
+    "excludes": [
+      "International flights",
+      "Travel insurance",
+      "Beverages",
+      "Tips"
+    ],
+    "custom_notes": "Perfect short trek for sunrise views over Annapurnas.",
+    "booking_terms": "30% deposit. Easy cancellation terms.",
+    "active": true,
+    "created_at": "2026-01-07T12:00:00Z",
+    "updated_at": "2026-01-07T12:00:00Z"
+  },
+  {
+    "id": "offer-8",
+    "agent_id": "agency-2",
+    "agent_name": "Nepal Trekking Co",
+    "agent_rating": 4.9,
+    "trek_id": "6",
+    "trek_slug": "poon-hill",
+    "price_usd": 420,
+    "group_size_min": 2,
+    "group_size_max": 12,
+    "availability_start": "2026-02-15",
+    "availability_end": "2026-12-31",
+    "includes": [
+      "Expert guide",
+      "All permits",
+      "3 meals + snacks per day",
+      "Premium teahouse rooms",
+      "Pokhara hotel-trek transfers",
+      "Welcome dinner in Pokhara"
+    ],
+    "excludes": [
+      "Flights",
+      "Insurance",
+      "Alcohol"
+    ],
+    "custom_notes": "Comfortable Poon Hill experience with premium service.",
+    "booking_terms": "25% deposit. Flexible cancellation.",
+    "active": true,
+    "created_at": "2026-01-03T10:00:00Z",
+    "updated_at": "2026-01-08T16:00:00Z"
+  }
+]

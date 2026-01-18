@@ -30,6 +30,45 @@ export interface Trek {
   agencyId?: string; // The agency that owns/manages this trek. If null, trek is managed by admin
 }
 
+export interface Agent {
+  id: string;
+  username: string;
+  email: string;
+  agency_name: string;
+  phone: string;
+  address: string;
+  description: string;
+  website: string;
+  license_number: string;
+  rating: number;
+  total_reviews: number;
+  total_bookings: number;
+  verified: boolean;
+  active: boolean;
+  created_at: string;
+}
+
+export interface AgentTrekOffer {
+  id: string;
+  agent_id: string;
+  agent_name: string;
+  agent_rating: number;
+  trek_id: string;
+  trek_slug: string;
+  price_usd: number;
+  group_size_min: number;
+  group_size_max: number;
+  availability_start: string;
+  availability_end: string;
+  includes: string[];
+  excludes: string[];
+  custom_notes: string;
+  booking_terms: string;
+  active: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
 export interface Inquiry {
   id?: string;
   fullName: string;

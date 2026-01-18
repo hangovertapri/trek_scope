@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import type { Trek } from '@/lib/types';
-import { getAllTreks } from '@/lib/data';
+import { getAllTreks, getOffersByTrekSlug } from '@/lib/data';
 import { findImage } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -42,6 +42,7 @@ import TrekMap from '@/components/trek/map';
 import ReviewsList from '@/components/trek/reviews-list';
 import ReviewForm from '@/components/trek/review-form';
 import CostCalculator from '@/components/trek/cost-calculator';
+import AgentOffers from '@/components/trek/agent-offers';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -99,6 +100,9 @@ export default async function TrekDetailPage({ params }: Props) {
     if (!trek) {
       notFound();
     }
+
+  // Get all agent offers for this trek
+  const agentOffers = getOffersByTrekSlug(trek.slug);
 
   const heroImage = findImage(trek.images[0]);
 
@@ -262,6 +266,13 @@ export default async function TrekDetailPage({ params }: Props) {
                         )
                     })}
                 </div>
+            </AnimateOnScroll>
+
+            <Separator className="my-12" />
+
+            {/* Agent Offers Section */}
+            <AnimateOnScroll as="section" id="agent-offers" className="scroll-mt-20">
+              <AgentOffers offers={agentOffers} trekName={trek.name} trekSlug={trek.slug} />
             </AnimateOnScroll>
 
             <Separator className="my-12" />

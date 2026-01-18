@@ -8,9 +8,13 @@ import { Textarea } from "@/components/ui/textarea";
 type Props = {
   defaultTrek?: string;
   trekName?: string;
+  agentOfferId?: string;
+  agentId?: string;
+  agentName?: string;
+  onSuccess?: () => void;
 };
 
-export default function BookingForm({ defaultTrek, trekName }: Props) {
+export default function BookingForm({ defaultTrek, trekName, agentOfferId, agentId, agentName, onSuccess }: Props) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState<string | null>(null);
 
@@ -20,6 +24,9 @@ export default function BookingForm({ defaultTrek, trekName }: Props) {
     const formData = new FormData(form);
     if (defaultTrek) formData.set("trek", defaultTrek);
     if (trekName) formData.set("trekName", trekName);
+    if (agentOfferId) formData.set("agentOfferId", agentOfferId);
+    if (agentId) formData.set("agentId", agentId);
+    if (agentName) formData.set("agentName", agentName);
 
     const payload: Record<string, any> = {};
     formData.forEach((value, key) => {
@@ -56,6 +63,12 @@ export default function BookingForm({ defaultTrek, trekName }: Props) {
       setStatus("success");
       setMessage("Booking request submitted! The agency will contact you soon.");
       form.reset();
+      // Call onSuccess callback if provided
+      if (onSuccess) {
+        setTimeout(() => {
+          onSuccess();
+        }, 1500);
+      }
     } catch (err: any) {
       setStatus("error");
       setMessage(err?.message || "Submission failed");

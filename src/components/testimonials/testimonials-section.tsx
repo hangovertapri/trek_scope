@@ -238,17 +238,17 @@ export default function TestimonialsSection() {
         {/* Stats */}
         <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-slate-800">
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-2">4.9★</div>
+            <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-2" suppressHydrationWarning>4.9★</div>
             <p className="text-slate-300 text-sm">Average Rating</p>
             <p className="text-xs text-slate-500">from 2,400+ reviews</p>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-2">12K+</div>
+            <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-2" suppressHydrationWarning>12K+</div>
             <p className="text-slate-300 text-sm">Happy Trekkers</p>
             <p className="text-xs text-slate-500">since 2015</p>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-2">99%</div>
+            <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-2" suppressHydrationWarning>99%</div>
             <p className="text-slate-300 text-sm">Satisfaction Rate</p>
             <p className="text-xs text-slate-500">recommend us</p>
           </div>
